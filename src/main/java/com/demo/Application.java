@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class Application {
 
   @RequestMapping("/")
-  String home() {
+  String home() throws InterruptedException {
+    Thread.sleep(10000);
     return "Hello World!";
   }
 
